@@ -8,7 +8,7 @@ public class FindElementDemo {
 	
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
 		
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://166.62.36.207/humanresources/symfony/web/index.php/auth/login\n");

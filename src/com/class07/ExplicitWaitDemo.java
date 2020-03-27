@@ -1,6 +1,7 @@
 package com.class07;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,7 +20,7 @@ public class ExplicitWaitDemo extends CommonMethods {
 		
 		public static void main(String[] args) throws InterruptedException {
 			setUp("chrome", Constants.SYNTAX_PRACTICE_URL);
-			driver.findElement(By.linkText("Others")).click();
+			 driver.findElement(By.linkText("Others")).click();
 			driver.findElement(By.linkText("Dynamic Data Loading")).click();
 			driver.findElement(By.id("save")).click();
 			

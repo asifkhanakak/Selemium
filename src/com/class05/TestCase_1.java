@@ -27,6 +27,7 @@ Quit browser*/
 		
 		driver.findElement(By.xpath("//a[@href='#' and text()='Alerts & Modals']")).click();
 		driver.findElement(By.linkText("Javascript Alerts")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@onclick='myAlertFunction()']")).click();
 		Thread.sleep(2000);
 		Alert alert=driver.switchTo().alert();

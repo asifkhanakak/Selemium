@@ -43,7 +43,7 @@ public class TestCase_1 extends CommonMethods {
 		// Finding number of options for Year DropDown
 		Select obj3= new Select(driver.findElement(By.cssSelector("select#year")));
 		List<WebElement> yearDD=obj3.getOptions();
-		System.out.println("Total number of options in Day DropDown= "+yearDD.size());
+		System.out.println("Total number of options in Year DropDown= "+yearDD.size());
 		
 		
 		System.out.println("************************************************************");

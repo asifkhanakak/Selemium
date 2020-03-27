@@ -38,7 +38,7 @@ public class TestCase_4 extends CommonMethods {
 
 		Select options = new Select(state);
 		List<WebElement> stateSize = options.getOptions();
-		System.out.println(stateSize.size());
+		System.out.println("Number of states= "+stateSize.size());
 		Thread.sleep(2000);
 
 		options.selectByVisibleText("Virginia");
@@ -47,17 +47,20 @@ public class TestCase_4 extends CommonMethods {
 		driver.findElement(By.name("website")).sendKeys("www.website.com");
 		Thread.sleep(3000);
 
-//   FIX THE FOLLOWING CODE		
-//	List<WebElement> radButtHosting = driver.findElements(By.xpath("//div[@class='col-md-4']"));
-//	System.out.println(radButtHosting.size());
-//	radButtHosting.get(0).click();
-//		for(WebElement rbh : radButtHosting) {
-//			//String value=rbh.getAttribute("value");
-//			Thread.sleep(2000);
-//			if(!rbh.isSelected()) {
-//				rbh.click();
-//				break;
-
+  // FIX THE FOLLOWING CODE		
+	List<WebElement> radButtHosting = driver.findElements(By.xpath("//div[@class='col-md-4']"));
+	System.out.println("Number of options to select   "+radButtHosting.size());
+	radButtHosting.get(1).click();
+	Thread.sleep(3000);
+		for(WebElement rbh : radButtHosting) {
+			String value=rbh.getAttribute("value");
+			Thread.sleep(2000);
+			
+			if(value.equalsIgnoreCase("no"))  {
+				rbh.click();
+				break;
+			}
+			}
 		WebElement check = driver.findElement(By.xpath("//input[@value='yes' and @type='radio']"));
 		if (check.isEnabled() & !check.isSelected()) {
 			check.click();
@@ -79,4 +82,4 @@ public class TestCase_4 extends CommonMethods {
 
 	}
 
-}
+		}
